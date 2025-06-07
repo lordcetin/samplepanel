@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: false,
   
   webpack: config => {
-    config.externals.push('pino-pretty', 'lokijs', 'encoding','bcryptjs');
+    config.externals.push('pino-pretty', 'lokijs', 'encoding','bcrypt');
     return config;
   },
   experimental: {
