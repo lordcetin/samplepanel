@@ -64,7 +64,7 @@ const AuthClient = (props: Props) => {
       <div className="flex-col items-center w-[600px] h-96 p-10">
         <h1 className="text-2xl font-bold text-white/60">ADMIN LOGIN</h1>
         <div className="flex-col items-center w-full mt-10">
-          <form ref={formRef} onSubmit={handleRegister}>
+          <form ref={formRef} onSubmit={handleLogin}>
           <InputThird
           id="email"
           label="Email"

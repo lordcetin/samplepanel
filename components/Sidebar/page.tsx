@@ -13,7 +13,6 @@ import { RiNftLine } from "react-icons/ri";
 import { usePathname, useRouter } from "next/navigation";
 import { IoChevronForward } from "react-icons/io5";
 import Logo from "../Logo/page";
-import { playSound } from "@/lib/playSound";
 import Link from "next/link";
 
 import { CiChat2 } from "react-icons/ci";
