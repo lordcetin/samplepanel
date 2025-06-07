@@ -3,7 +3,7 @@
 import { NextResponse } from "next/server"
 import prismadb from '@/lib/prismadb'
 import axios from "axios";
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import { uid } from "uid";
 
 export async function POST(request: Request) {

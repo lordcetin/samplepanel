@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { auth } from "@/auth";
 import AuthClient from "@/components/AuthClient/AuthClient";
 import { ChartAreaStacked } from "@/components/Charts/AreaChart/AreaChart";
@@ -6,11 +6,7 @@ import { ChartBarHorizontal } from "@/components/Charts/BarChart/BarChart";
 import { ChartLineDefault } from "@/components/Charts/LineChart/LineChart";
 import PieChartDonut from "@/components/Charts/PieChart/PieChartDonut";
 import { ChartRadialText } from "@/components/Charts/RadialChart/RadialChart";
-import HoverBorderGradientDemo from "@/components/HoverBorder/HoverBorderGradient";
-import Input from "@/components/Input/Input";
-import InputThird from "@/components/Input/InputThird";
 import { isEmpty } from "lodash";
-import Image from "next/image";
 
 export default async function Home() {
   const session = await auth()
