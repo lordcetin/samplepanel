@@ -57,7 +57,7 @@ export const { handlers, signIn, signOut, auth, update } = NextAuth({
   ],
   pages: {
     signIn: `/`,
-    newUser: `/`,
+    newUser: `/login`,
     error: '/auth/error',
   },
   callbacks: {
@@ -76,7 +76,7 @@ export const { handlers, signIn, signOut, auth, update } = NextAuth({
         token.firmName = user.firmName
         token.firmStatus = user.firmStatus
         token.adminStatus = user.adminStatus
-        token.conversationId = user.conversationId
+        token.role = user.role
       }
 
       if (trigger === "update" && session) {
@@ -86,7 +86,7 @@ export const { handlers, signIn, signOut, auth, update } = NextAuth({
         token.firmName = session.firmName ?? token.firmName
         token.firmStatus = session.firmStatus ?? token.firmStatus
         token.adminStatus = session.adminStatus ?? token.adminStatus
-        // Eğer başka alanlar varsa buraya ekle!
+        token.role = user.role
       }
 
       return token
@@ -100,6 +100,7 @@ export const { handlers, signIn, signOut, auth, update } = NextAuth({
       session.user.firmName = token.firmName
       session.user.firmStatus = token.firmStatus
       session.user.adminStatus = token.adminStatus
+      session.user.role = token.role
       session.user.conversationId = token.conversationId
       return session
     },

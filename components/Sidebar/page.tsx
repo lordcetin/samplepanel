@@ -106,8 +106,6 @@ const Sidebar = (props: Props) => {
     getConversation();
   }, []);
 
-  console.log("user",user)
-
   return (
     <>
 

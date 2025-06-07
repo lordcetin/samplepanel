@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { auth } from "@/auth";
 import AuthClient from "@/components/AuthClient/AuthClient";
@@ -9,10 +11,10 @@ import { ChartRadialText } from "@/components/Charts/RadialChart/RadialChart";
 import { isEmpty } from "lodash";
 
 export default async function Home() {
-  const session = await auth()
+  const session:any = await auth()
   return (
     <>
-    {!isEmpty(session?.user) ?
+    {session?.user?.role === "ADMIN" ?
       <div className="flex-col items-center w-full overflow-x-hidden">
       <div className='absolute left-0 top-0 welcome w-full h-full'></div>
       <div className="flex justify-center items-center w-screen h-screen bg-grid-small-white fixed top-0 left-0"></div>

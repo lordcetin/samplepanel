@@ -31,6 +31,8 @@ model User {
   emailVerified DateTime
   phone String @default("")
   hashedPassword String
+  amount String
+  
 
   memberId String
   conversationId String @default("")
@@ -41,6 +43,8 @@ model User {
   session Session[]
 
   adminStatus String @default("user")
+  paymentStatus Boolean
+  isActive Boolean
 
   expires DateTime
   updated DateTime @updatedAt

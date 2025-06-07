@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -34,8 +35,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const session = await auth()
+  const session:any = await auth()
 
+  console.log("session",session)
+  
   return (
     <html lang="en">
       <body
@@ -54,9 +57,9 @@ export default async function RootLayout({
         >
           
           <div className="flex ">
-            {!isEmpty(session) && <Sidebar/>}
+            {session?.user?.role === "ADMIN" && <Sidebar/>}
               <div className="flex-col items-center w-full bg-black">
-                {!isEmpty(session) && <Navbar/>}
+                {session?.user?.role === "ADMIN" && <Navbar/>}
                   <section className=" flex-col flex items-center">
                   
                   {children}

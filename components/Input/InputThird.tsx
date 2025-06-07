@@ -12,9 +12,10 @@ interface InputProps{
   type?: string;
   name?: string;
   onError:boolean;
+  defaultValue:string;
 }
 
-const InputThird: React.FC<InputProps> = ({id,value,label,name,type = "text",onError}) => {
+const InputThird: React.FC<InputProps> = ({id,value,label,name,type = "text",onError,defaultValue=""}) => {
   
   const [show,setShow] = useState(false);
   const [inputType,setType] = useState(type)
@@ -31,8 +32,9 @@ const InputThird: React.FC<InputProps> = ({id,value,label,name,type = "text",onE
       <>
       <label htmlFor={label} className="block relative w-full">
       <input
-      required={true}
+      required={false}
       type={inputType}
+      defaultValue={defaultValue}
       name={name}
       id={id}
       autoComplete='new-password'
