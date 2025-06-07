@@ -67,6 +67,7 @@ const AddUser = (props: Props) => {
           <form ref={formRef} onSubmit={handleRegister} className='flex flex-col gap-4 p-20'>
             <InputThird
             label='Full Name'
+            defaultValue=''
             id='name'
             name='fullName'
             type='text'
@@ -76,6 +77,7 @@ const AddUser = (props: Props) => {
             <InputThird
             label={'Email'}
             id='email'
+            defaultValue=''
             type='text'
             name='email'
             value={(e:any) => e.target.value}
@@ -85,6 +87,7 @@ const AddUser = (props: Props) => {
             label='Password'
             id='password'
             type='password'
+            defaultValue=''
             name='password'
             value={(e:any) => e.target.value}
             onError={false}

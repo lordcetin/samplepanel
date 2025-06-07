@@ -87,6 +87,7 @@ const Auth = (props: Props) => {
               <>
               <InputThird
               label='Full Name'
+              defaultValue=''
               id='name'
               name='fullName'
               type='text'
@@ -98,6 +99,7 @@ const Auth = (props: Props) => {
             <InputThird
             label={variant == 'register' ? 'Email' : 'Username/Email'}
             id='email'
+            defaultValue=''
             type='text'
             name='email'
             value={(e:any) => e.target.value}
@@ -106,6 +108,7 @@ const Auth = (props: Props) => {
             <InputThird
             label='Password'
             id='password'
+            defaultValue=''
             type='password'
             name='password'
             value={(e:any) => e.target.value}

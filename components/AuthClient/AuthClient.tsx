@@ -67,6 +67,7 @@ const AuthClient = (props: Props) => {
           <form ref={formRef} onSubmit={handleLogin}>
           <InputThird
           id="email"
+          defaultValue=''
           label="Email"
           onError={false}
           value={(e:any) => e?.target.value}
@@ -76,6 +77,7 @@ const AuthClient = (props: Props) => {
           <InputThird
           id="password"
           label="Password"
+          defaultValue=''
           onError={false}
           value={(e:any) => e?.target.value}
           name="password"
